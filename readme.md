@@ -1,4 +1,6 @@
-# Experiment Code and Data of SIGIR 2019 Submission 384
+# Lifelong Sequential Modeling with Personalized Memorizationfor User Response Prediction
+
+A `tensorflow` implementation of all the compared models for the SIGIR 2019 paper: Lifelong Sequential Modeling with Personalized Memorizationfor User Response Prediction.
 
 ### Data Preparation
 - In the `data/amazon` folder, we give three small sample dataset that has been preprocessed, the sample code is running on the sample data. The `dataset_crop.pkl` is for the baseline `SHAN` (cut a short-term and a long-term sequence) and `dataset_hpmn.pkl` (padding in the front) is for our `HPMN` model, all the other baselines are based on the `dataset.pkl`
