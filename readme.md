@@ -1,4 +1,4 @@
-# Lifelong Sequential Modeling with Personalized Memorizationfor User Response Prediction
+# Lifelong Sequential Modeling with Personalized Memorization for User Response Prediction
 
 A `tensorflow` implementation of all the compared models for the SIGIR 2019 paper: Lifelong Sequential Modeling with Personalized Memorizationfor User Response Prediction.
 
