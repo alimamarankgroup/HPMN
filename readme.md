@@ -1,6 +1,6 @@
-# Lifelong Sequential Modeling with Personalized Memorization for User Response Prediction
+# Hierarchical Periodic Memory Network (HPMN)
 
-A `tensorflow` implementation of all the compared models for the SIGIR 2019 paper: Lifelong Sequential Modeling with Personalized Memorizationfor User Response Prediction.
+A `tensorflow` implementation of all the compared models for our SIGIR 2019 paper: Lifelong Sequential Modeling with Personalized Memorizationfor User Response Prediction.
 
 The experiments are supported by Alimama Rank Group from Alibaba Inc.
 Paper will be published ASAP.
