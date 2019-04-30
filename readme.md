@@ -31,7 +31,7 @@ python rum.py [DATASET] [GPU] # To run RUM
 ```
 
 ### Note: Train/Test Splitting
-![image](./data-split-empty.pdf)
+![image](./data-split-empty.png)
 As shown in above figure, we split the training and test dataset according to the timestamp of the prediction behavior.
 We set a cut time within the time range covered by the full dataset.
 If the last behavior of a sequence took place before the cut time, the sequence is put into the training set. Otherwise it would be in the test set. In this way, training set is about 70% of the whole dataset and test set is about 30%.
