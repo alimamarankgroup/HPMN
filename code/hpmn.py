@@ -623,6 +623,46 @@ if __name__ == '__main__':
             memory_reg=1e-5)
         model.train(2, 128)
         model.save_model()
+
+
+    elif dataset_name == 'xlong':
+        train_set = '../data/xlong/train_corpus_total_dual.txt'
+        test_set = '../data/xlong/test_corpus_total_dual.txt'
+        pv_cnt = 19002
+        feature_size = pv_cnt + np.load(
+         '/home/weijie.bwj/UIC/data/cvr_dataset/graph_emb.npy').shape[0] + 20000
+        max_len_item = 1000 + 1
+        max_len_user = 184
+        item_part_fnum = 2
+        user_part_fnum = 1
+        emb_initializer = np.concatenate(
+         (
+             np.load('/home/weijie.bwj/UIC/data/cvr_dataset/graph_emb.npy'),
+             np.zeros([20000, 16]),
+             np.zeros([pv_cnt, 16])), 0
+        ).astype(np.float32)
+        model = Hpmn_Industry(
+            'model/xlong/hpmn/',
+            train_set,
+            test_set,
+            feature_size,
+            item_part_fnum,
+            user_part_fnum,
+            max_len_item,
+            max_len_user,
+            0.001,
+            32,
+            16,
+            3, [2] * 10 + [1], [3, 2, 2, 2, 2, 2, 2, 1],
+            5,
+            8,
+            True,
+            False,
+            emb_initializer,
+            l2_reg=0,
+            memory_reg=5e-5)
+        model.train(epochs=3, batchsize=500)
+        model.get_weights()
     else:
         print("Dataset must be one of taobao or amazon.")
         exit(1)
