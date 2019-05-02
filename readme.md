@@ -6,6 +6,11 @@ The experiments are supported by Alimama Rank Group from Alibaba Inc.
 Paper will be published ASAP.
 
 If you have any problems, please propose an issue or contact the authors: [Kan Ren](http://saying.ren/), [Jiarui Qin](http://apex.sjtu.edu.cn/members/qinjr) and [Yuchen Fang](http://apex.sjtu.edu.cn/members/arthur_fyc).
+
+
+### Abstract
+> User response prediction, which models the user preference w.r.t. the presented items, plays a key role in online services. With two-decade rapid development, nowadays the cumulated user behavior sequences on mature Internet service platforms have become extremely long since the user's first registration. Each user not only has intrinsic tastes, but also keeps changing her personal interests during lifetime. Hence, it is challenging to handle such lifelong sequential modeling for each individual user. Existing methodologies for sequential modeling are only capable of dealing with relatively recent user behaviors, which leaves huge space for modeling long-term especially lifelong sequential patterns to facilitate user modeling. Moreover, one user's behavior may be accounted for various previous behaviors within her whole online activity history, i.e., long-term dependency with multi-scale sequential patterns. In order to tackle these challenges, in this paper, we propose a Hierarchical Periodic Memory Network for lifelong sequential modeling with personalized memorization of sequential patterns for each user. The model also adopts a hierarchical and periodical updating mechanism to capture multi-scale sequential patterns of user interests while supporting the evolving user behavior logs. The experimental results over three large-scale real-world datasets have demonstrated the advantages of our proposed model with significant improvement in user response prediction performance against the state-of-the-arts.
+
 ### Dependencies
 * [TensorFlow](https://www.tensorflow.org/) 1.4
 * [python](https://www.python.org/) 2.7
