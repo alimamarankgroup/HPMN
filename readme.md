@@ -35,6 +35,18 @@ python shan.py [DATASET] [GPU] # To run SHAN
 python rum.py [DATASET] [GPU] # To run RUM
 ```
 
+### Citation
+You are more than welcome to cite our paper:
+```
+@inproceedings{ren2019lifelong,
+	title={Lifelong Sequential Modeling with Personalized Memorization for User Response Prediction},
+	author={Ren, Kan and Qin, Jiarui and Fang, Yuchen and Zhang, Weinan and Zheng, Lei and Bian, Weijie and Zhou, Guorui and Xu, Jian and Yu, Yong and Zhu, Xiaoqiang and Gai, Kun},
+	booktitle={Proceedings of 42nd International ACM SIGIR Conference on Research and Development in Information Retrieval},
+	year={2019},
+  organization={ACM}
+}
+```
+
 ### Note: Train/Test Splitting
 <div align=center><img src='./data-split-empty.png' width=500 height=250></div>
 
