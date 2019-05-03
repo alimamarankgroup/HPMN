@@ -1,8 +1,10 @@
 # Hierarchical Periodic Memory Network (HPMN)
 
-A `tensorflow` implementation of all the compared models for our SIGIR 2019 paper: "[Lifelong Sequential Modeling with Personalized Memorization for User Response Prediction](https://arxiv.org/abs/1905.00758)".
+A `tensorflow` implementation of all the compared models for our SIGIR 2019 paper:
+> [Lifelong Sequential Modeling with Personalized Memorization for User Response Prediction](https://arxiv.org/abs/1905.00758)
 
 The experiments are supported by Alimama Rank Group from Alibaba Inc.
+
 The paper preprint version has been published in [arXiv](https://arxiv.org/abs/1905.00758).
 
 If you have any problems, please propose an issue or contact the authors: [Kan Ren](http://saying.ren/), [Jiarui Qin](http://apex.sjtu.edu.cn/members/qinjr) and [Yuchen Fang](http://apex.sjtu.edu.cn/members/arthur_fyc).
