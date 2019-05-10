@@ -27,6 +27,11 @@ If you have any problems, please propose an issue or contact the authors: [Kan R
 python preprocess_amazon.py
 python preprocess_taobao.py
 ```
+- For `XLong`, you should download the files into `data/xlong`, then do the following:
+
+```
+python preprocess_xlong.py
+```
 
 ### Run the Codes
 - To run the code of the models:

@@ -592,8 +592,7 @@ if __name__ == '__main__':
             False,
             l2_reg=0.,
             memory_reg=1e-5)
-        #model.train(2, 128)
-        model.train(2, 10) #change the batch size to 128 when getting the full datasets
+        model.train(2, 128)
         model.save_model()
 
     elif dataset_name == 'taobao':
