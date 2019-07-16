@@ -15,6 +15,7 @@ _BIAS_VARIABLE_NAME = "bias"
 _WEIGHTS_VARIABLE_NAME = "kernel"
 
 
+
 class rum_cell(tf.contrib.rnn.RNNCell):
     def __init__(self, feature_number, num_units, reuse=False, dtype=tf.float32, name=None, **kwargs):
         self._feature_number = feature_number
