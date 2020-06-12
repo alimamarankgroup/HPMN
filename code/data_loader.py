@@ -88,7 +88,7 @@ class DataLoader_Mul:
         with self.work_stop.get_lock():
             self.work_stop.value += 1.
 
-    def next(self):
+    def __next__(self):
         while self.qsize.value == 0. and self.work_stop.value != self.worker_n:
             time.sleep(self.wait_time)
         if self.qsize.value == 0. and self.work_stop.value == self.worker_n:
@@ -99,6 +99,9 @@ class DataLoader_Mul:
         with self.qsize.get_lock():
             self.qsize.value -= 1.
         return re
+    
+    def next(self):
+        return self.__next__()
 
     def __iter__(self):
         return self
@@ -273,7 +276,7 @@ class DataLoader:
     def __iter__(self):
         return self
 
-    def next(self):
+    def __next__(self):
         if self.i == self.num_of_step:
             raise StopIteration
 
@@ -293,6 +296,9 @@ class DataLoader:
         user_part = np.array(user_part)
         self.i += 1
         return self.i, (label, item_part, item_part_len, user_part, user_part_len)
+
+    def next(self):
+        return self.__next__()
 
 class RUMDataloader():
     def __init__(self, dataset, batch_size):

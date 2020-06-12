@@ -585,15 +585,14 @@ if __name__ == '__main__':
             0.003,
             32,
             16,
-            7, [2, 2, 5, 5, 1], [2, 2, 5, 5, 1],
+            3, [2, 2, 5, 5, 1], [2, 2, 5, 5, 1],
             3,
-            5,
+            3,
             True,
             False,
-            l2_reg=1e-5,
-            memory_reg=5e-5)
-        #model.train(2, 128)
-        model.train(2, 10) #change the batch size to 128 when getting the full datasets
+            l2_reg=0.,
+            memory_reg=1e-5)
+        model.train(2, 128)
         model.save_model()
 
     elif dataset_name == 'taobao':
@@ -630,14 +629,14 @@ if __name__ == '__main__':
         test_set = '../data/xlong/test_corpus_total_dual.txt'
         pv_cnt = 19002
         feature_size = pv_cnt + np.load(
-         '/home/weijie.bwj/UIC/data/cvr_dataset/graph_emb.npy').shape[0] + 20000
+         '../data/xlong/graph_emb.npy').shape[0] + 20000
         max_len_item = 1000 + 1
         max_len_user = 184
         item_part_fnum = 2
         user_part_fnum = 1
         emb_initializer = np.concatenate(
          (
-             np.load('/home/weijie.bwj/UIC/data/cvr_dataset/graph_emb.npy'),
+             np.load('../data/xlong/graph_emb.npy'),
              np.zeros([20000, 16]),
              np.zeros([pv_cnt, 16])), 0
         ).astype(np.float32)
