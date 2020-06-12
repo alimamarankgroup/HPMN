@@ -190,6 +190,21 @@ if __name__ == '__main__':
             user_part_fnum = 3
             emb_initializer = None
             iter_num = 1
+    elif dataset == 'xlong':
+        train_set = '../data/xlong/train_corpus_total_dual.txt'
+        test_set = '../data/xlong/train_corpus_total_dual.txt'
+        pv_cnt = 19002
+        feature_size = pv_cnt + np.load('../data/xlong/graph_emb.npy').shape[0] + 20000
+        max_len_item = 1000 + 1
+        max_len_user = 184
+        item_part_fnum = 2
+        user_part_fnum = 1
+        
+        item_emb_init = np.load('../data/xlong/graph_emb.npy')
+        user_emb_init = np.zeros([20000, 16])
+        pv_num_emb = np.zeros([pv_cnt, 16])
+        emb_initializer = np.concatenate((item_emb_init, user_emb_init, pv_num_emb), 0).astype(np.float32)
+        iter_num = 80
 
     # hyperparameters: train batch size, learning rate
     train_batch_sizes = [128]
