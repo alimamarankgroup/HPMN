@@ -192,7 +192,7 @@ if __name__ == '__main__':
             iter_num = 1
     elif dataset == 'xlong':
         train_set = '../data/xlong/train_corpus_total_dual.txt'
-        test_set = '../data/xlong/train_corpus_total_dual.txt'
+        test_set = '../data/xlong/test_corpus_total_dual.txt'
         pv_cnt = 19002
         feature_size = pv_cnt + np.load('../data/xlong/graph_emb.npy').shape[0] + 20000
         max_len_item = 1000 + 1
